@@ -4,12 +4,8 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class Hand {
-
     private List<Card> cards;
-
-    public List<Card> getCards() {
-        return cards;
-    }
+    private HandStatus status;
 
     public Hand() {
         this.cards = new ArrayList<>();
@@ -45,6 +41,10 @@ public class Hand {
         sb.append("]");
 
         return String.format("Value=%d, %s", this.getValue(), sb.toString());
+    }
+
+    public List<Card> getCards() {
+        return cards;
     }
 
     public HandStatus getStatus() {
