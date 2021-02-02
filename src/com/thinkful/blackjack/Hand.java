@@ -33,7 +33,7 @@ public class Hand {
 
         sb.append("[");
         for (Card c: this.getCards()) {
-            sb.append(String.format("%s", c));
+            sb.append(String.format("%s,", c));
         }
         if (this.getCards().size() > 0) {
             sb.deleteCharAt(sb.length() - 1); // remove the extraneous comma
